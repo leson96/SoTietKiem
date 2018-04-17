@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 11-Apr-2018 22:52:47 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.Thamso" table="thamso" catalog="sotietkiem" optimistic-lock="version">
+        <id name="idquyDinhSoTien" type="int">
+            <column name="IDQuyDinhSoTien" />
+            <generator class="assigned" />
+        </id>
+        <property name="tenQuyDinh" type="string">
+            <column name="TenQuyDinh" length="45" />
+        </property>
+        <property name="soTienGuiToiThieu" type="float">
+            <column name="SoTienGuiToiThieu" precision="12" scale="0" not-null="true" />
+        </property>
+        <property name="soTienGuiToiDa" type="float">
+            <column name="SoTienGuiToiDa" precision="12" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

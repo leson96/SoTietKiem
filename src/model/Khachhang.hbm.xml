@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 11-Apr-2018 22:52:47 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.Khachhang" table="khachhang" catalog="sotietkiem" optimistic-lock="version">
+        <id name="idkhachHang" type="string">
+            <column name="IDKhachHang" length="10" />
+            <generator class="assigned" />
+        </id>
+        <property name="tenKhachHang" type="string">
+            <column name="TenKhachHang" length="50" not-null="true" />
+        </property>
+        <property name="diaChi" type="string">
+            <column name="DiaChi" length="45" not-null="true" />
+        </property>
+        <property name="cmnd" type="string">
+            <column name="CMND" length="10" not-null="true" />
+        </property>
+        <property name="ngaySinh" type="date">
+            <column name="NgaySinh" length="10" not-null="true" />
+        </property>
+        <property name="quocTich" type="string">
+            <column name="QuocTich" length="45" />
+        </property>
+        <property name="queQuan" type="string">
+            <column name="QueQuan" length="15" />
+        </property>
+        <property name="ngheNghiep" type="string">
+            <column name="NgheNghiep" length="45" />
+        </property>
+        <property name="isActive" type="java.lang.Boolean">
+            <column name="IsActive" />
+        </property>
+    </class>
+</hibernate-mapping>

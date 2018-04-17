@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 11-Apr-2018 22:52:47 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.Loaitietkiem" table="loaitietkiem" catalog="sotietkiem" optimistic-lock="version">
+        <id name="idloaiTietKiem" type="int">
+            <column name="IDLoaiTietKiem" />
+            <generator class="assigned" />
+        </id>
+        <property name="tenLtk" type="string">
+            <column name="TenLTK" length="45" not-null="true" />
+        </property>
+        <property name="soNgayRut" type="int">
+            <column name="SoNgayRut" not-null="true" />
+        </property>
+        <property name="laiSuat" type="float">
+            <column name="LaiSuat" precision="12" scale="0" not-null="true" />
+        </property>
+        <property name="laiSuatTruocHan" type="java.lang.Float">
+            <column name="LaiSuatTruocHan" precision="12" scale="0" />
+        </property>
+        <property name="kyHan" type="string">
+            <column name="KyHan" length="45" not-null="true">
+                <comment>Don vi thang</comment>
+            </column>
+        </property>
+        <property name="guiThem" type="java.lang.Boolean">
+            <column name="GuiThem" not-null="true">
+                <comment>Gui them - khong thoi han</comment>
+            </column>
+        </property>
+        <property name="tienGuiToiThieu" type="float">
+            <column name="TienGuiToiThieu" precision="12" scale="0" not-null="true" />
+        </property>
+        <property name="isActive" type="boolean">
+            <column name="IsActive" not-null="true" />
+        </property>
+        <property name="idthamSo" type="string">
+            <column name="IDThamSo" length="45" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

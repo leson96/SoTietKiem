@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 11-Apr-2018 22:52:47 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.Tinhlai" table="tinhlai" catalog="sotietkiem" optimistic-lock="version">
+        <id name="idTinhlai" type="int">
+            <column name="idTinhlai" />
+            <generator class="assigned" />
+        </id>
+        <property name="idstk" type="string">
+            <column name="IDSTK" length="10" not-null="true" />
+        </property>
+        <property name="soTienGoc" type="string">
+            <column name="SoTienGoc" length="45" not-null="true" />
+        </property>
+        <property name="tongLaiSuat" type="string">
+            <column name="TongLaiSuat" length="45" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

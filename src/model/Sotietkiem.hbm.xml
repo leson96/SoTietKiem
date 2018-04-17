@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 11-Apr-2018 22:52:47 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.Sotietkiem" table="sotietkiem" catalog="sotietkiem" optimistic-lock="version">
+        <id name="idstk" type="string">
+            <column name="IDSTK" length="10" />
+            <generator class="assigned" />
+        </id>
+        <property name="idloaiTietKiem" type="int">
+            <column name="IDLoaiTietKiem" not-null="true" />
+        </property>
+        <property name="idkh" type="string">
+            <column name="IDKH" length="10" not-null="true" />
+        </property>
+        <property name="ngayMo" type="date">
+            <column name="NgayMo" length="10" />
+        </property>
+        <property name="dongSo" type="boolean">
+            <column name="DongSo" not-null="true" />
+        </property>
+        <property name="loaiTien" type="string">
+            <column name="LoaiTien" length="5" not-null="true" />
+        </property>
+        <property name="ngayTinhLai" type="date">
+            <column name="NgayTinhLai" length="10">
+                <comment>Ng&#224;y t&#237;nh l&#227;i su?t</comment>
+            </column>
+        </property>
+        <property name="ngayDenHan" type="date">
+            <column name="NgayDenHan" length="10">
+                <comment>Ng&#224;y ??n h?n r&#250;t l&#227;i</comment>
+            </column>
+        </property>
+        <property name="tongTien" type="float">
+            <column name="TongTien" precision="12" scale="0" not-null="true" />
+        </property>
+        <property name="isActive" type="boolean">
+            <column name="IsActive" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
